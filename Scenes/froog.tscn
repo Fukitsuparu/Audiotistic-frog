@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0i2axgji3xh4"]
+
+[ext_resource type="Script" path="res://Script/Froog.gd" id="1_ef6j2"]
+[ext_resource type="Texture2D" uid="uid://degtuews63crt" path="res://Assets/Art/froog.png" id="2_du337"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bd1pa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_du337")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l31g4"]
+radius = 432.0
+height = 1172.0
+
+[node name="Froog" type="CharacterBody2D"]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_ef6j2")
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bd1pa")
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_l31g4")
