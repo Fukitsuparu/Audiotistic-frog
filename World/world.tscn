@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6worure245c6"]
+
+[ext_resource type="Script" path="res://World.gd" id="1_jdlns"]
+[ext_resource type="Script" path="res://CanvasLayer.gd" id="2_ljv30"]
+[ext_resource type="PackedScene" uid="uid://bumbgrx07pi6v" path="res://gui/inventory_gui.tscn" id="3_tmeb6"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_jdlns")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("2_ljv30")
+
+[node name="InventoryGUI" parent="CanvasLayer" instance=ExtResource("3_tmeb6")]
