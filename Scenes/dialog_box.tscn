@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://doa1rt33svguu"]
+
+[ext_resource type="Script" path="res://Script/Attachements/Dialog Box.gd" id="1_efmy1"]
+[ext_resource type="Texture2D" uid="uid://clsni62e5w5eg" path="res://Assets/Art/roundrect.png" id="2_fo3ww"]
+[ext_resource type="Texture2D" uid="uid://cbhjtvvkj4yul" path="res://icon.svg" id="5_7pdb4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bc2vv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_7pdb4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Dialog Box" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_efmy1")
+text = "Testing12345642830jsd9o m390dpjiso9f8uo9js83jfdpw3s9jdps3a09kempc9srj03 jsk4p3 jrp0dkp0sjkdp0k os0w3 jseod9lojfd90ej3s93r j9oxejof9 jep093rsuj0zwd9icp0s9idps0j 0r39sp jfp0sj9fse4"
+
+[node name="bg" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = -352.0
+offset_top = -96.0
+offset_right = 352.0
+offset_bottom = 104.0
+texture = ExtResource("2_fo3ww")
+region_rect = Rect2(68, 68, 339, 339)
+patch_margin_left = 60
+patch_margin_top = 60
+patch_margin_right = 60
+patch_margin_bottom = 60
+
+[node name="text" type="Label" parent="."]
+layout_mode = 0
+offset_left = -128.0
+offset_top = -64.0
+offset_right = 288.0
+offset_bottom = 64.0
+text = "[Insert speech here]
+"
+autowrap_mode = 3
+text_overrun_behavior = 3
+
+[node name="profileStatic" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-240, 0)
+scale = Vector2(0.1, 0.1)
+
+[node name="profileAnimated" type="AnimatedSprite2D" parent="."]
+position = Vector2(-240, 0)
+sprite_frames = SubResource("SpriteFrames_bc2vv")
